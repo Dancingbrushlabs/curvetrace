@@ -1,24 +1,21 @@
-# Curve Trace
+# CurveTrace Website
 
-**A fast image digitizer for charts, log images, and scanned figures.**
+Marketing website for **CurveTrace**, a Windows desktop application for turning
+curve images into structured data.
 
-Curve Trace is a lightweight desktop tool for quickly extracting curve data from
-images. It is designed for practical, quick-turnaround digitizing work: load an
-image, calibrate the axes, trace the curve, review the result, and export the
-data.
+CurveTrace accepts common image files and clipboard captures from charts,
+technical figures, scanned documents, and well logs. The workflow covers image
+import, region selection, axis calibration, curve tracing, visual quality
+control, and export to CSV, LAS, or PNG. Processing and licensing are designed
+to work offline.
 
-## Why Curve Trace?
+## Product status
 
-- Fast curve digitizing from image-based charts
-- Simple workflow for rough-to-clean data extraction
-- Color and masking tools for isolating target curves
-- Data export for downstream analysis
-- Useful for scanned plots, technical figures, and log images
-
-## Status
-
-Curve Trace is under active development. Public downloads will be linked when
-the first release package is ready.
+- Windows 10 and Windows 11
+- 64-bit installer in preparation
+- 7-day trial planned for the first public release
+- Offline license activation
+- Public download link will be added when the installer is released
 
 ## Website
 
@@ -26,16 +23,12 @@ the first release package is ready.
 https://dancingbrushlabs.github.io/curvetrace/
 ```
 
-## Local Preview
+## Local preview
 
-Serve the folder with any static file server:
+Serve the repository with any static file server:
 
 ```bash
-python3 -m http.server 8082
+python -m http.server 8082
 ```
 
-Then open:
-
-```text
-http://localhost:8082
-```
+Then open `http://localhost:8082`.

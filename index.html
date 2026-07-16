@@ -3,124 +3,178 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Curve Trace</title>
+    <title>CurveTrace — Turn curve images into structured data</title>
+    <meta name="theme-color" content="#7777e8" />
     <meta
       name="description"
-      content="Curve Trace is a desktop tool for extracting curve data from modern color log documents, charts, PDFs, and presentation images."
+      content="CurveTrace is a private, offline Windows desktop app for digitizing curves from charts, screenshots, scanned figures, and well log images."
     />
+    <link rel="icon" type="image/png" href="assets/curve-trace-icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Curve Trace home">
-        <span class="brand-mark" aria-hidden="true">CT</span>
-        <span>Curve Trace</span>
+      <a class="brand" href="#top" aria-label="CurveTrace home">
+        <img src="assets/curve-trace-icon.png" alt="" />
+        <span>CurveTrace</span>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#features">Features</a>
         <a href="#workflow">Workflow</a>
         <a href="#download">Download</a>
+        <a href="#support">Support</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section class="hero page-width">
         <div class="hero-content">
-          <p class="eyebrow">Digitize curves from images</p>
-          <h1>Curve Trace</h1>
+          <p class="eyebrow"><span></span> Windows desktop app · 100% offline</p>
+          <h1>Turn curve images into <span>structured data.</span></h1>
           <p class="hero-copy">
-            A desktop tool for tracing curves from modern color log documents,
-            including PDF pages and presentation captures, then turning them
-            into structured data.
+            Trace curves from charts, screenshots, scanned figures, and well log
+            images. Calibrate, review, and export clean data without uploading
+            your source files.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#download">Download coming soon</a>
-            <a class="button secondary" href="#features">View features</a>
+            <a class="button primary" href="#download">Windows release coming soon</a>
+            <a class="button secondary" href="#workflow">See how it works <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="hero-facts" aria-label="Product highlights">
+            <li><strong>7-day</strong> free trial</li>
+            <li><strong>CSV · LAS · PNG</strong> export</li>
+            <li><strong>No cloud</strong> required</li>
+          </ul>
+        </div>
+
+        <div class="product-stage" aria-label="CurveTrace application preview">
+          <div class="stage-glow"></div>
+          <div class="app-window">
+            <div class="window-bar">
+              <div class="window-brand">
+                <img src="assets/curve-trace-icon.png" alt="" />
+                <span>CurveTrace</span>
+              </div>
+              <div class="window-controls" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <div class="app-body">
+              <aside class="tool-rail" aria-hidden="true">
+                <b>CT</b><span></span><span></span><span></span><span></span>
+              </aside>
+              <div class="workspace">
+                <div class="workspace-head">
+                  <span>Source image</span><span>Digitized result</span>
+                </div>
+                <div class="chart source-chart">
+                  <svg viewBox="0 0 300 310" role="img" aria-label="Source curve image">
+                    <path class="source-fill" d="M88 294 C61 247 128 214 102 170 C78 129 152 97 126 50 C113 28 137 17 150 7 L214 7 L214 294 Z" />
+                    <path class="source-line" d="M88 294 C61 247 128 214 102 170 C78 129 152 97 126 50 C113 28 137 17 150 7" />
+                    <rect class="roi" x="51" y="17" width="168" height="273" />
+                  </svg>
+                  <span class="depth-label one">1,200</span><span class="depth-label two">1,300</span><span class="depth-label three">1,400</span>
+                </div>
+                <div class="chart result-chart">
+                  <svg viewBox="0 0 300 310" role="img" aria-label="Digitized curve result">
+                    <path class="result-shadow" d="M88 294 C61 247 128 214 102 170 C78 129 152 97 126 50 C113 28 137 17 150 7" />
+                    <path class="result-line" d="M88 294 C61 247 128 214 102 170 C78 129 152 97 126 50 C113 28 137 17 150 7" />
+                    <g class="result-points"><circle cx="88" cy="294" r="4"/><circle cx="102" cy="170" r="4"/><circle cx="126" cy="50" r="4"/></g>
+                  </svg>
+                </div>
+              </div>
+              <div class="quick-panel" aria-hidden="true">
+                <strong>Quick controls</strong>
+                <label>Curve color <i></i></label>
+                <label>Tolerance <span>24</span></label>
+                <div class="slider"><b></b></div>
+                <button>Run trace</button>
+              </div>
+            </div>
+            <div class="status-bar"><span>Ready</span><span>Points: 1,248</span></div>
           </div>
         </div>
-        <div class="hero-panel" aria-label="Curve Trace preview">
-          <div class="chart-grid">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+      </section>
+
+      <section class="trust-strip" aria-label="CurveTrace essentials">
+        <div class="page-width trust-grid">
+          <p><span class="trust-icon">⌁</span><strong>Works offline</strong><small>Your files stay on your PC</small></p>
+          <p><span class="trust-icon">⊞</span><strong>Built for Windows</strong><small>Windows 10 and 11</small></p>
+          <p><span class="trust-icon">7</span><strong>Try before licensing</strong><small>Full 7-day trial</small></p>
+          <p><span class="trust-icon">↗</span><strong>Flexible export</strong><small>CSV, LAS, and PNG</small></p>
+        </div>
+      </section>
+
+      <section id="features" class="section page-width">
+        <div class="section-heading centered">
+          <p class="eyebrow">Focused curve digitizing</p>
+          <h2>From image to usable data, without the busywork.</h2>
+          <p>Purpose-built controls keep tracing fast while leaving the final quality in your hands.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-icon purple">⌁</span><h3>Fast curve extraction</h3><p>Isolate a target curve by color and tolerance, then generate a trace in seconds.</p></article>
+          <article class="feature-card"><span class="feature-icon blue">▣</span><h3>Flexible image input</h3><p>Open common image files or paste a chart directly from the clipboard.</p></article>
+          <article class="feature-card"><span class="feature-icon cyan">◎</span><h3>Built-in quality control</h3><p>Compare source and result side by side, inspect points, and refine the output.</p></article>
+          <article class="feature-card"><span class="feature-icon violet">◐</span><h3>Color and fill workflows</h3><p>Handle colored curves, monochrome traces, and filled well-log intervals.</p></article>
+          <article class="feature-card"><span class="feature-icon indigo">⌖</span><h3>Precise calibration</h3><p>Define the region of interest and axis references before digitizing.</p></article>
+          <article class="feature-card"><span class="feature-icon sky">↗</span><h3>Practical exports</h3><p>Send clean data to the next step as CSV or LAS, with PNG for visual review.</p></article>
+        </div>
+      </section>
+
+      <section id="workflow" class="workflow-section">
+        <div class="page-width">
+          <div class="section-heading centered light">
+            <p class="eyebrow">A clear workflow</p>
+            <h2>Five steps from source to result.</h2>
           </div>
-          <svg viewBox="0 0 520 320" role="img" aria-label="Traced curve preview">
-            <path class="curve shadow" d="M34 242 C92 118 154 100 205 168 S318 274 384 156 462 82 492 118" />
-            <path class="curve main" d="M34 242 C92 118 154 100 205 168 S318 274 384 156 462 82 492 118" />
-            <g class="points">
-              <circle cx="34" cy="242" r="6" />
-              <circle cx="205" cy="168" r="6" />
-              <circle cx="384" cy="156" r="6" />
-              <circle cx="492" cy="118" r="6" />
-            </g>
-          </svg>
+          <ol class="workflow-steps">
+            <li><span>01</span><strong>Import</strong><p>Open an image or paste from the clipboard.</p></li>
+            <li><span>02</span><strong>Crop</strong><p>Set the exact region you want to digitize.</p></li>
+            <li><span>03</span><strong>Calibrate</strong><p>Map image coordinates to real values.</p></li>
+            <li><span>04</span><strong>Trace & review</strong><p>Extract the curve and correct it visually.</p></li>
+            <li><span>05</span><strong>Export</strong><p>Save structured data or a review image.</p></li>
+          </ol>
         </div>
       </section>
 
-      <section id="features" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Features</p>
-          <h2>Fast, private digitizing without a complicated setup</h2>
+      <section class="section page-width precision-section">
+        <div class="precision-copy">
+          <p class="eyebrow">Designed for real-world images</p>
+          <h2>Keep control when the source is less than perfect.</h2>
+          <p>Adjust masks, color tolerance, fill direction, and curve points as you work. CurveTrace combines automatic extraction with hands-on correction for practical QC.</p>
+          <ul><li>Side-by-side source and result review</li><li>Editable curve points and masks</li><li>Offline processing from start to finish</li></ul>
         </div>
-        <div class="grid">
-          <article class="card">
-            <h3>Drop & Drag</h3>
-            <p>Load an image and start working without complicated settings or setup steps.</p>
-          </article>
-          <article class="card">
-            <h3>100% Offline</h3>
-            <p>Your images and digitized data stay on your computer. Nothing is sent to a server.</p>
-          </article>
-          <article class="card">
-            <h3>Quick Digitize & QC</h3>
-            <p>Use the interactive interface to digitize, inspect, and quality-check results quickly.</p>
-          </article>
-          <article class="card">
-            <h3>Color-Based Well Log Digitizing</h3>
-            <p>Trace color logs, with black-and-white workflows available, to produce consistent digitized results.</p>
-          </article>
-          <article class="card">
-            <h3>Color Fill Log Digitizing</h3>
-            <p>Extract curve boundaries from filled color log tracks, including single-fill and two-curve fill intervals.</p>
-          </article>
-          <article class="card">
-            <h3>Modern Document Focus</h3>
-            <p>Built for color logs embedded in PDFs, PowerPoint decks, reports, and screenshots rather than only legacy raster scans.</p>
-          </article>
-          <article class="card">
-            <h3>Easy Modification</h3>
-            <p>Edit and refine digitized curves after extraction without restarting the workflow.</p>
-          </article>
+        <div class="precision-visual" aria-hidden="true">
+          <div class="mini-chart"><span>Source</span><svg viewBox="0 0 240 220"><path class="source-fill" d="M66 208 C42 171 112 149 82 114 C57 84 129 61 104 27 C96 16 106 9 118 4 L174 4 L174 208Z"/><path class="source-line" d="M66 208 C42 171 112 149 82 114 C57 84 129 61 104 27 C96 16 106 9 118 4"/></svg></div>
+          <div class="visual-arrow">→</div>
+          <div class="mini-chart clean"><span>Result</span><svg viewBox="0 0 240 220"><path class="result-line" d="M66 208 C42 171 112 149 82 114 C57 84 129 61 104 27 C96 16 106 9 118 4"/></svg></div>
         </div>
       </section>
 
-      <section id="workflow" class="section muted split">
-        <div>
-          <p class="eyebrow">Workflow</p>
-          <h2>Load, calibrate, trace, export.</h2>
+      <section id="download" class="download-section">
+        <div class="page-width download-card">
+          <div>
+            <p class="eyebrow">Windows release</p>
+            <h2>CurveTrace is getting ready for its first public release.</h2>
+            <p>The installer will support Windows 10 and Windows 11. A 7-day trial is included, with offline license activation available after the trial.</p>
+          </div>
+          <div class="download-action">
+            <img src="assets/curve-trace-icon.png" alt="CurveTrace app icon" />
+            <span class="status-pill"><i></i> Release in preparation</span>
+            <a class="button primary disabled" aria-disabled="true">Download coming soon</a>
+            <small>64-bit Windows 10/11</small>
+          </div>
         </div>
-        <ol class="steps">
-          <li>Import an image file or clipboard capture.</li>
-          <li>Define the region of interest and axis references.</li>
-          <li>Adjust curve color, fill direction, and masks to guide the trace.</li>
-          <li>Review the result and export the data file.</li>
-        </ol>
       </section>
 
-      <section id="download" class="section download">
-        <p class="eyebrow">Download</p>
-        <h2>Public downloads will be linked after the first release.</h2>
-        <p class="section-copy">
-          Once installers are ready, this area will provide download buttons for
-          macOS or Windows.
-        </p>
+      <section id="support" class="support-section page-width">
+        <div><p class="eyebrow">Support</p><h2>Questions about setup or licensing?</h2></div>
+        <div><p>We can help with installation, offline license activation, and product feedback.</p><a href="mailto:support.curvetrace@gmail.com">support.curvetrace@gmail.com <span aria-hidden="true">↗</span></a></div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Curve Trace by Dancing Brush Labs</span>
-      <a href="https://github.com/Dancingbrushlabs" rel="noreferrer">GitHub</a>
+      <div class="brand"><img src="assets/curve-trace-icon.png" alt="" /><span>CurveTrace</span></div>
+      <span>© 2026 Dancing Brush Labs</span>
+      <a href="https://github.com/Dancingbrushlabs" rel="noreferrer">GitHub ↗</a>
     </footer>
   </body>
 </html>

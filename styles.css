@@ -71,6 +71,7 @@ h3 { margin: 0; font-size: 20px; letter-spacing: -.02em; }
 .source-line { fill: none; stroke: #376999; stroke-width: 5; stroke-linecap: round; }
 .roi { fill: none; stroke: var(--purple); stroke-width: 2; stroke-dasharray: 6 4; }
 .depth-label { position: absolute; left: 4px; color: #86828a; font-size: 7px; }.depth-label.one{top:12%}.depth-label.two{top:48%}.depth-label.three{top:84%}
+.track-header { position: absolute; z-index: 2; top: 5px; right: 9px; padding: 2px 6px; border: 1px solid rgba(106, 105, 182, .22); border-radius: 4px; color: #5f61a8; font-size: 7px; font-weight: 800; letter-spacing: .08em; background: rgba(255,255,255,.82); }
 .result-line { fill: none; stroke: #6974e6; stroke-width: 5; stroke-linecap: round; }
 .result-shadow { fill: none; stroke: rgba(75,188,242,.18); stroke-width: 16; stroke-linecap: round; }
 .result-points circle { fill: #fff; stroke: #9a6fe7; stroke-width: 2; }
@@ -106,6 +107,7 @@ h3 { margin: 0; font-size: 20px; letter-spacing: -.02em; }
 .feature-card { min-height: 238px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.76); box-shadow: 0 9px 32px rgba(51,49,97,.04); transition: transform .2s ease, border-color .2s ease; }
 .feature-card:hover { transform: translateY(-4px); border-color: #c6c3e7; }
 .feature-card p { margin: 14px 0 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.secondary-use-case { max-width: 680px; margin: 30px auto 0; color: #85869a; font-size: 12px; line-height: 1.6; text-align: center; }
 .feature-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 28px; border-radius: 12px; }.feature-icon svg{width:24px;height:24px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.feature-icon.purple{color:#9a5dd9;background:#f2eafd}.feature-icon.blue{color:#4f7fe0;background:#e9f0ff}.feature-icon.cyan{color:#258eba;background:#e5f7fe}.feature-icon.violet{color:#6f65d9;background:#edebff}.feature-icon.indigo{color:#5864c7;background:#eaedfc}.feature-icon.sky{color:#338cca;background:#e7f4fd}
 
 .workflow-section { overflow: hidden; padding-block: clamp(88px, 10vw, 130px); color: white; background: radial-gradient(circle at 15% 0, rgba(166,107,232,.27), transparent 35%), radial-gradient(circle at 93% 100%, rgba(75,188,242,.18), transparent 32%), #282943; }

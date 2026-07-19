@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CurveTrace — Turn curve images into structured data</title>
+    <title>CurveTrace — Well Log Image Digitizer</title>
     <meta name="theme-color" content="#7777e8" />
     <meta
       name="description"
-      content="CurveTrace is a private, offline Windows desktop app for digitizing curves from charts, screenshots, scanned figures, and well log images."
+      content="CurveTrace is an offline Windows application for digitizing scanned well logs and raster log images into calibrated LAS and CSV data."
     />
     <link rel="icon" type="image/png" href="assets/curve-trace-icon.png" />
     <link rel="stylesheet" href="styles.css" />
@@ -30,12 +30,12 @@
     <main id="top">
       <section class="hero page-width">
         <div class="hero-content">
-          <p class="eyebrow"><span></span> Windows desktop app · 100% offline</p>
-          <h1>Turn curve images into <span>structured data.</span></h1>
+          <p class="eyebrow"><span></span> Well log digitizing · Windows desktop app · 100% offline</p>
+          <h1>Turn legacy well log images into <span>digital log data.</span></h1>
           <p class="hero-copy">
-            Trace curves from charts, screenshots, scanned figures, and well log
-            images. Calibrate, review, and export clean data without uploading
-            your source files.
+            Extract, calibrate, review, and export curves from scanned well logs,
+            log screenshots, and legacy raster images. Save the results as LAS or
+            CSV without uploading confidential subsurface data.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#download">Windows release coming soon</a>
@@ -43,7 +43,7 @@
           </div>
           <ul class="hero-facts" aria-label="Product highlights">
             <li><strong>7-day</strong> free trial</li>
-            <li><strong>CSV · LAS · PNG</strong> export</li>
+            <li><strong>LAS · CSV · PNG</strong> export</li>
             <li><strong>No cloud</strong> required</li>
           </ul>
         </div>
@@ -67,14 +67,16 @@
                   <span>Source image</span><span>Digitized result</span>
                 </div>
                 <div class="chart source-chart">
+                  <span class="track-header">GR</span>
                   <svg viewBox="0 0 300 310" role="img" aria-label="Source curve image">
                     <path class="source-fill" d="M88 294 C61 247 128 214 102 170 C78 129 152 97 126 50 C113 28 137 17 150 7 L214 7 L214 294 Z" />
                     <path class="source-line" d="M88 294 C61 247 128 214 102 170 C78 129 152 97 126 50 C113 28 137 17 150 7" />
                     <rect class="roi" x="51" y="17" width="168" height="273" />
                   </svg>
-                  <span class="depth-label one">1,200</span><span class="depth-label two">1,300</span><span class="depth-label three">1,400</span>
+                  <span class="depth-label one">1,200 m</span><span class="depth-label two">1,300 m</span><span class="depth-label three">1,400 m</span>
                 </div>
                 <div class="chart result-chart">
+                  <span class="track-header">GR</span>
                   <svg viewBox="0 0 300 310" role="img" aria-label="Digitized curve result">
                     <path class="result-shadow" d="M88 294 C61 247 128 214 102 170 C78 129 152 97 126 50 C113 28 137 17 150 7" />
                     <path class="result-line" d="M88 294 C61 247 128 214 102 170 C78 129 152 97 126 50 C113 28 137 17 150 7" />
@@ -84,10 +86,10 @@
               </div>
               <div class="quick-panel" aria-hidden="true">
                 <strong>Quick controls</strong>
-                <label>Curve color <i></i></label>
+                <label>Log curve <i></i></label>
                 <label>Tolerance <span>24</span></label>
                 <div class="slider"><b></b></div>
-                <button>Run trace</button>
+                <button>Digitize curve</button>
               </div>
             </div>
             <div class="status-bar"><span>Ready</span><span>Points: 1,248</span></div>
@@ -99,11 +101,11 @@
         <div class="demo-heading">
           <div>
             <p class="eyebrow">See CurveTrace in action</p>
-            <h2>From source image to structured curve data.</h2>
+            <h2>From well log image to calibrated digital curve.</h2>
           </div>
           <p>
-            Follow the complete workflow—from drag-and-drop import and ROI setup
-            to curve review and export—in under a minute.
+            Follow the complete workflow—from well log image import and track
+            selection to depth calibration, visual quality control, and LAS or CSV export.
           </p>
         </div>
         <div class="demo-frame">
@@ -133,42 +135,43 @@
 
       <section id="features" class="section page-width">
         <div class="section-heading centered">
-          <p class="eyebrow">Focused curve digitizing</p>
-          <h2>From image to usable data, without the busywork.</h2>
-          <p>Purpose-built controls keep tracing fast while leaving the final quality in your hands.</p>
+          <p class="eyebrow">Purpose-built for well log digitizing</p>
+          <h2>From legacy log image to usable subsurface data.</h2>
+          <p>Focused tools help you extract log curves quickly while keeping calibration and final quality under your control.</p>
         </div>
         <div class="feature-grid">
-          <article class="feature-card"><span class="feature-icon purple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18c3-1 3-9 6-9s3 6 6 6 3-8 6-9"/><circle cx="3" cy="18" r="1"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="15" r="1"/><circle cx="21" cy="6" r="1"/></svg></span><h3>Fast curve extraction</h3><p>Isolate a target curve by color and tolerance, then generate a trace in seconds.</p></article>
-          <article class="feature-card"><span class="feature-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.5"/><path d="m5 18 5-5 3.2 3.2 2.3-2.3L19 18"/></svg></span><h3>Flexible image input</h3><p>Open common image files or paste a chart directly from the clipboard.</p></article>
-          <article class="feature-card"><span class="feature-icon cyan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/><path d="m16.5 18 1.5 1.5 3-3"/></svg></span><h3>Built-in quality control</h3><p>Compare source and result side by side, inspect points, and refine the output.</p></article>
-          <article class="feature-card"><span class="feature-icon violet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11Z"/><path d="M12 8v12a6 6 0 0 0 6-6c0-2.1-1.3-4.8-3-7.1"/></svg></span><h3>Color and fill workflows</h3><p>Handle colored curves, monochrome traces, and filled well-log intervals.</p></article>
-          <article class="feature-card"><span class="feature-icon indigo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg></span><h3>Precise calibration</h3><p>Define the region of interest and axis references before digitizing.</p></article>
-          <article class="feature-card"><span class="feature-icon sky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h8l4 4V21H6V2.5Z"/><path d="M14 2.5V7h4M12 10v7m-3-3 3 3 3-3"/></svg></span><h3>Practical exports</h3><p>Send clean data to the next step as CSV or LAS, with PNG for visual review.</p></article>
+          <article class="feature-card"><span class="feature-icon purple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18c3-1 3-9 6-9s3 6 6 6 3-8 6-9"/><circle cx="3" cy="18" r="1"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="15" r="1"/><circle cx="21" cy="6" r="1"/></svg></span><h3>Well log curve extraction</h3><p>Extract colored or monochrome log curves using color and tolerance controls.</p></article>
+          <article class="feature-card"><span class="feature-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.5"/><path d="m5 18 5-5 3.2 3.2 2.3-2.3L19 18"/></svg></span><h3>Flexible log image input</h3><p>Open scanned logs, screenshots, and common raster image formats, or paste an image from the clipboard.</p></article>
+          <article class="feature-card"><span class="feature-icon cyan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/><path d="m16.5 18 1.5 1.5 3-3"/></svg></span><h3>Visual quality control</h3><p>Compare the source image and digitized result side by side, inspect points, and correct mismatches.</p></article>
+          <article class="feature-card"><span class="feature-icon violet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11Z"/><path d="M12 8v12a6 6 0 0 0 6-6c0-2.1-1.3-4.8-3-7.1"/></svg></span><h3>Color, grayscale, and fill workflows</h3><p>Digitize colored curves, grayscale traces, and filled well-log intervals.</p></article>
+          <article class="feature-card"><span class="feature-icon indigo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg></span><h3>Depth and scale calibration</h3><p>Map image coordinates to measured depth and curve values before digitizing.</p></article>
+          <article class="feature-card"><span class="feature-icon sky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h8l4 4V21H6V2.5Z"/><path d="M14 2.5V7h4M12 10v7m-3-3 3 3 3-3"/></svg></span><h3>LAS and CSV export</h3><p>Export calibrated digital curves as LAS or CSV, with PNG output for visual review.</p></article>
         </div>
+        <p class="secondary-use-case">CurveTrace can also digitize other vertically oriented scientific curves and charts.</p>
       </section>
 
       <section id="workflow" class="workflow-section">
         <div class="page-width">
           <div class="section-heading centered light">
             <p class="eyebrow">A clear workflow</p>
-            <h2>Five steps from source to result.</h2>
+            <h2>Five steps from well log image to digital data.</h2>
           </div>
           <ol class="workflow-steps">
-            <li><span>01</span><strong>Import</strong><p>Open an image or paste from the clipboard.</p></li>
-            <li><span>02</span><strong>Crop</strong><p>Set the exact region you want to digitize.</p></li>
-            <li><span>03</span><strong>Calibrate</strong><p>Map image coordinates to real values.</p></li>
-            <li><span>04</span><strong>Trace & review</strong><p>Extract the curve and correct it visually.</p></li>
-            <li><span>05</span><strong>Export</strong><p>Save structured data or a review image.</p></li>
+            <li><span>01</span><strong>Import</strong><p>Open a scanned well log, screenshot, or raster log image.</p></li>
+            <li><span>02</span><strong>Select track</strong><p>Define the log track or region you want to digitize.</p></li>
+            <li><span>03</span><strong>Calibrate</strong><p>Set measured depth and curve scale references.</p></li>
+            <li><span>04</span><strong>Digitize &amp; review</strong><p>Extract the curve, compare it with the source, and correct it visually.</p></li>
+            <li><span>05</span><strong>Export</strong><p>Save the calibrated result as LAS, CSV, or a review image.</p></li>
           </ol>
         </div>
       </section>
 
       <section class="section page-width precision-section">
         <div class="precision-copy">
-          <p class="eyebrow">Designed for real-world images</p>
-          <h2>Keep control when the source is less than perfect.</h2>
-          <p>Adjust masks, color tolerance, fill direction, and curve points as you work. CurveTrace combines automatic extraction with hands-on correction for practical QC.</p>
-          <ul><li>Side-by-side source and result review</li><li>Editable curve points and masks</li><li>Offline processing from start to finish</li></ul>
+          <p class="eyebrow">Designed for real-world well log images</p>
+          <h2>Keep control when legacy log images are less than perfect.</h2>
+          <p>Adjust masks, color tolerance, fill direction, and curve points while comparing the result with the original log image. CurveTrace combines fast extraction with hands-on correction for practical well log QC.</p>
+          <ul><li>Side-by-side source and digitized curve review</li><li>Editable curve points, masks, and intervals</li><li>Offline processing from import to LAS export</li></ul>
         </div>
         <div class="precision-visual" aria-hidden="true">
           <div class="mini-chart"><span>Source</span><svg viewBox="0 0 240 220"><path class="source-fill" d="M66 208 C42 171 112 149 82 114 C57 84 129 61 104 27 C96 16 106 9 118 4 L174 4 L174 208Z"/><path class="source-line" d="M66 208 C42 171 112 149 82 114 C57 84 129 61 104 27 C96 16 106 9 118 4"/></svg></div>
@@ -182,7 +185,7 @@
           <div>
             <p class="eyebrow">Windows release</p>
             <h2>CurveTrace is getting ready for its first public release.</h2>
-            <p>The installer will support Windows 10 and Windows 11. A 7-day trial is included, with offline license activation available after the trial.</p>
+            <p>The installer will support 64-bit Windows 10 and Windows 11. A full 7-day trial is included, with simple offline license activation available after the trial.</p>
           </div>
           <div class="download-action">
             <img src="assets/curve-trace-icon.png" alt="CurveTrace app icon" />
